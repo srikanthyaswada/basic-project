@@ -1,0 +1,19 @@
+{
+  "name": "basic-mvc-project",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.6.1",
+    "express": "^4.22.2",
+    "jsonwebtoken": "^9.0.3",
+    "mysql2": "^3.22.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

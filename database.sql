@@ -1,0 +1,21 @@
+CREATE DATABASE IF NOT EXISTS school_db;
+USE school_db;
+
+-- Admins table
+CREATE TABLE IF NOT EXISTS admins (
+  id         INT AUTO_INCREMENT PRIMARY KEY,
+  name       VARCHAR(100) NOT NULL,
+  email      VARCHAR(150) NOT NULL UNIQUE,
+  password   VARCHAR(255) NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Students table
+CREATE TABLE IF NOT EXISTS students (
+  id         INT AUTO_INCREMENT PRIMARY KEY,
+  name       VARCHAR(100) NOT NULL,
+  email      VARCHAR(150) NOT NULL UNIQUE,
+  phone      VARCHAR(20),
+  course     VARCHAR(100),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
