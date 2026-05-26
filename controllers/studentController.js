@@ -1,7 +1,5 @@
 const Student = require("../models/Student");
 
-// ── GET ALL STUDENTS ──────────────────────────────────────────────────────────
-// GET /api/students
 const getAllStudents = async (req, res) => {
   try {
     const students = await Student.findAll();
@@ -12,8 +10,6 @@ const getAllStudents = async (req, res) => {
   }
 };
 
-// ── GET ONE STUDENT ───────────────────────────────────────────────────────────
-// GET /api/students/:id
 const getStudent = async (req, res) => {
   try {
     const student = await Student.findById(req.params.id);
@@ -29,8 +25,6 @@ const getStudent = async (req, res) => {
   }
 };
 
-// ── CREATE STUDENT ────────────────────────────────────────────────────────────
-// POST /api/students
 const createStudent = async (req, res) => {
   try {
     const { name, email, phone, course } = req.body;
@@ -48,8 +42,6 @@ const createStudent = async (req, res) => {
   }
 };
 
-// ── UPDATE STUDENT ────────────────────────────────────────────────────────────
-// PUT /api/students/:id
 const updateStudent = async (req, res) => {
   try {
     const student = await Student.findById(req.params.id);
@@ -68,8 +60,6 @@ const updateStudent = async (req, res) => {
   }
 };
 
-// ── DELETE STUDENT ────────────────────────────────────────────────────────────
-// DELETE /api/students/:id
 const deleteStudent = async (req, res) => {
   try {
     const student = await Student.findById(req.params.id);
