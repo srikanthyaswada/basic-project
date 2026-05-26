@@ -10,7 +10,7 @@ const Admin = {
     );
     return rows[0]; 
   },
-
+ 
   // Admin register
   create: async (name, email, hashedPassword) => {
     const [result] = await db.execute(

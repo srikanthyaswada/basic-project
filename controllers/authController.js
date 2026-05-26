@@ -1,6 +1,6 @@
 const bcrypt = require("bcryptjs");
-const jwt = require("jsonwebtoken");
 const Admin = require("../models/Admin");
+const { generateToken } = require("../middleware/token");
 
 const register = async (req, res) => {
   try {
@@ -49,11 +49,7 @@ const login = async (req, res) => {
       return res.status(401).json({ message: "Invalid email or password." });
     }
 
-    const token = jwt.sign(
-      { id: admin.id, email: admin.email },
-      process.env.JWT_SECRET,
-      { expiresIn: "1d" },
-    );
+    const token = generateToken({ id: admin.id, email: admin.email });
 
     res.json({
       message: "Login successful.",

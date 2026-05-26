@@ -4,11 +4,10 @@ require("dotenv").config();
 const app = express();
 
 app.use(express.json());
-const protect = require("./middleware/auth");
 const adminRoutes = require("./routes/auth");
 const studentRoutes = require("./routes/students");
 app.use("/api/auth", adminRoutes);
-app.use("/api/students", protect, studentRoutes);
+app.use("/api/students", studentRoutes);
 app.get("/", (req, res) => {
   res.json({ message: "API is running!" });
 });

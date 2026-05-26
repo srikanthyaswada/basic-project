@@ -98,12 +98,7 @@
           "name": "Get All Students",
           "request": {
             "method": "GET",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "Bearer {{authToken}}"
-              }
-            ],
+            "header": [],
             "url": {
               "raw": "{{base_url}}/api/students",
               "host": ["{{base_url}}"],
@@ -116,16 +111,11 @@
           "name": "Get Student by ID",
           "request": {
             "method": "GET",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "Bearer {{authToken}}"
-              }
-            ],
+            "header": [],
             "url": {
-              "raw": "{{base_url}}/api/students/1",
+              "raw": "{{base_url}}/api/students/student/1",
               "host": ["{{base_url}}"],
-              "path": ["api", "students", "1"]
+              "path": ["api", "students", "student", "1"]
             }
           },
           "response": []
@@ -138,10 +128,6 @@
               {
                 "key": "Content-Type",
                 "value": "application/json"
-              },
-              {
-                "key": "Authorization",
-                "value": "Bearer {{authToken}}"
               }
             ],
             "body": {
@@ -169,10 +155,6 @@
               {
                 "key": "Content-Type",
                 "value": "application/json"
-              },
-              {
-                "key": "Authorization",
-                "value": "Bearer {{authToken}}"
               }
             ],
             "body": {
@@ -185,9 +167,9 @@
               }
             },
             "url": {
-              "raw": "{{base_url}}/api/students/1",
+              "raw": "{{base_url}}/api/students/student/1",
               "host": ["{{base_url}}"],
-              "path": ["api", "students", "1"]
+              "path": ["api", "students", "student", "1"]
             }
           },
           "response": []
@@ -196,16 +178,11 @@
           "name": "Delete Student",
           "request": {
             "method": "DELETE",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "Bearer {{authToken}}"
-              }
-            ],
+            "header": [],
             "url": {
-              "raw": "{{base_url}}/api/students/1",
+              "raw": "{{base_url}}/api/students/student/1",
               "host": ["{{base_url}}"],
-              "path": ["api", "students", "1"]
+              "path": ["api", "students", "student", "1"]
             }
           },
           "response": []
